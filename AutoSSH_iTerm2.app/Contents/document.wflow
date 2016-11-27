@@ -485,7 +485,7 @@ end run</string>
 				<key>Class Name</key>
 				<string>MoveToTrashAction</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>InputUUID</key>
 				<string>0E848033-1557-4DCD-90EB-DCB2B5D7D192</string>
 				<key>Keywords</key>
@@ -509,28 +509,28 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>30DC56C7-6E35-47D3-ACE8-D4C56ED90796</key>
+		<key>5565ED89-C311-4F26-B32B-FEAD5C57C7C0</key>
 		<dict>
 			<key>from</key>
 			<string>9A2C0AF6-0249-49E6-8827-A64C48E04CB3 - 9A2C0AF6-0249-49E6-8827-A64C48E04CB3</string>
 			<key>to</key>
 			<string>54DF4EF1-9447-4EFC-AE8C-2D2E7A159F2A - 54DF4EF1-9447-4EFC-AE8C-2D2E7A159F2A</string>
 		</dict>
-		<key>3C484D9C-4568-40A2-8818-65089C732A3B</key>
-		<dict>
-			<key>from</key>
-			<string>54DF4EF1-9447-4EFC-AE8C-2D2E7A159F2A - 54DF4EF1-9447-4EFC-AE8C-2D2E7A159F2A</string>
-			<key>to</key>
-			<string>43412101-D510-4114-9BDF-1F9B31440D32 - 43412101-D510-4114-9BDF-1F9B31440D32</string>
-		</dict>
-		<key>6BCA6E90-8A5B-4BCE-9AA9-7559EC4D19D1</key>
+		<key>CAD5E096-F44B-442B-B65D-338D32EF1A4C</key>
 		<dict>
 			<key>from</key>
 			<string>043FC4E3-3D94-424B-946D-985D18053272 - 043FC4E3-3D94-424B-946D-985D18053272</string>
 			<key>to</key>
 			<string>386B80EB-4419-43EC-AA93-C3FB2C528558 - 386B80EB-4419-43EC-AA93-C3FB2C528558</string>
 		</dict>
-		<key>8EDC1EB4-1DE1-4B9D-B0FE-EBFA5FDF828C</key>
+		<key>EE46CD30-8CEB-4972-B295-2CFA6EB58B23</key>
+		<dict>
+			<key>from</key>
+			<string>54DF4EF1-9447-4EFC-AE8C-2D2E7A159F2A - 54DF4EF1-9447-4EFC-AE8C-2D2E7A159F2A</string>
+			<key>to</key>
+			<string>43412101-D510-4114-9BDF-1F9B31440D32 - 43412101-D510-4114-9BDF-1F9B31440D32</string>
+		</dict>
+		<key>F443FBBB-593D-4671-A13F-34C189DC34D8</key>
 		<dict>
 			<key>from</key>
 			<string>386B80EB-4419-43EC-AA93-C3FB2C528558 - 386B80EB-4419-43EC-AA93-C3FB2C528558</string>
