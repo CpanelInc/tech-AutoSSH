@@ -47,9 +47,9 @@ unless ( -r $pacha_conf ) {
 # $rcremote is a flat file containing a set of commands to run once logged
 # into a server. input with read may or may not be successful
 # you can change this to what you want, I figure ~ would be a good place
-my $rcremote = "$ENV{HOME}/.rc.remote";
+my $rcremote = "$ENV{HOME}/.rc_remote";
 unless ( -r $rcremote ) {
-    print "\n~/.rc.remote not found, creating a new one...\n";
+    print "\n~/.rc_remote not found, creating a new one...\n";
     open( RCREMOTE, ">", $rcremote );
     close(RCREMOTE);
 }
@@ -101,7 +101,7 @@ sub pacha_connect {
     chomp($pachauser);
     $privatekey =~ s/\~/$ENV{HOME}/;
     close($pacha_fh);
-    if ( !-r $privatekey || $pachauser eq "" ) { &fail("~/autossh.pacha format invalid"); }
+    if ( !-r $privatekey || $pachauser eq "" ) { &fail("~/autossh_pacha format invalid"); }
 
     my @SSHCMD_pacha = ( "ssh", "-C", "-i", "$privatekey", "$pachauser\@$pachahost\.cpanel.net" );
 
