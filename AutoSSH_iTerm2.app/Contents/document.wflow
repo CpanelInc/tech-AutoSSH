@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>419</string>
+	<string>428</string>
 	<key>AMApplicationVersion</key>
-	<string>2.6</string>
+	<string>2.7</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -159,7 +159,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run argv	set autosshFilePath to (quoted form of POSIX path of item 1 of argv as string)	set applicationPath to (quoted form of POSIX path of (path to me) as string)	set ticketNumber to getTicketNumber(autosshFilePath)	set tabNumber to getTabNumber(autosshFilePath)	setBadge(ticketNumber, tabNumber)	autossh(autosshFilePath, applicationPath)end runon getTicketNumber(autosshFilePath)	set ticketNumber to do shell script "cat " &amp; autosshFilePath &amp; "  | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"ticket_id\"]'"end getTicketNumberon getTabNumber(autosshFilePath)	set tabNumber to do shell script "cat " &amp; autosshFilePath &amp; "  | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"server_num\"]'"end getTabNumberon setBadge(ticketNumber, tabNumber)	tell application "iTerm"		tell current session of current window			set variable named "user.BADGE" to ticketNumber &amp; " #" &amp; tabNumber		end tell	end tellend setBadgeon autossh(autosshFilePath, applicationPath)	tell application "iTerm"		tell current session of current window			activate		end tell	end tell		tell application "System Events"		keystroke "u" using {control down}		keystroke "l" using {control down}	end tell		tell application "iTerm"		tell current session of current window			write text applicationPath &amp; "autossh4.pl " &amp; autosshFilePath		end tell	end tellend autossh</string>
+					<string>on run argv	set autosshFilePath to (quoted form of POSIX path of item 1 of argv as string)	set applicationPath to (quoted form of POSIX path of (path to me) as string)	set ticketNumber to getTicketNumber(autosshFilePath)	set tabNumber to getTabNumber(autosshFilePath)	setBadge(ticketNumber, tabNumber)	autossh(autosshFilePath, applicationPath)end runon getTicketNumber(autosshFilePath)	set ticketNumber to do shell script "cat " &amp; autosshFilePath &amp; "  | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"ticket_id\"]'"end getTicketNumberon getTabNumber(autosshFilePath)	set tabNumber to do shell script "cat " &amp; autosshFilePath &amp; "  | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"server_num\"]'"end getTabNumberon setBadge(ticketNumber, tabNumber)	tell application "iTerm"		tell current session of current window			set variable named "user.BADGE" to ticketNumber &amp; " #" &amp; tabNumber			set variable named "user.TKT" to ticketNumber			set variable named "user.TAB" to tabNumber		end tell	end tellend setBadgeon autossh(autosshFilePath, applicationPath)	tell application "iTerm"		tell current session of current window			activate		end tell	end tell		tell application "System Events"		keystroke "u" using {control down}		keystroke "l" using {control down}	end tell		tell application "iTerm"		tell current session of current window			write text applicationPath &amp; "autossh4.pl " &amp; autosshFilePath		end tell	end tellend autossh</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -509,33 +509,33 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>5565ED89-C311-4F26-B32B-FEAD5C57C7C0</key>
+		<key>8B6FE7EC-0071-413C-BECE-CCE44AB11A9B</key>
 		<dict>
 			<key>from</key>
 			<string>9A2C0AF6-0249-49E6-8827-A64C48E04CB3 - 9A2C0AF6-0249-49E6-8827-A64C48E04CB3</string>
 			<key>to</key>
 			<string>54DF4EF1-9447-4EFC-AE8C-2D2E7A159F2A - 54DF4EF1-9447-4EFC-AE8C-2D2E7A159F2A</string>
 		</dict>
-		<key>CAD5E096-F44B-442B-B65D-338D32EF1A4C</key>
+		<key>95477E03-DCD8-4914-A1A7-048EDEAB2F95</key>
+		<dict>
+			<key>from</key>
+			<string>386B80EB-4419-43EC-AA93-C3FB2C528558 - 386B80EB-4419-43EC-AA93-C3FB2C528558</string>
+			<key>to</key>
+			<string>9A2C0AF6-0249-49E6-8827-A64C48E04CB3 - 9A2C0AF6-0249-49E6-8827-A64C48E04CB3</string>
+		</dict>
+		<key>FBB7E4F3-C0F5-49EA-B66E-C4B4B8D97F36</key>
 		<dict>
 			<key>from</key>
 			<string>043FC4E3-3D94-424B-946D-985D18053272 - 043FC4E3-3D94-424B-946D-985D18053272</string>
 			<key>to</key>
 			<string>386B80EB-4419-43EC-AA93-C3FB2C528558 - 386B80EB-4419-43EC-AA93-C3FB2C528558</string>
 		</dict>
-		<key>EE46CD30-8CEB-4972-B295-2CFA6EB58B23</key>
+		<key>FD378B5D-6DCD-480D-A85B-C12D65D4679A</key>
 		<dict>
 			<key>from</key>
 			<string>54DF4EF1-9447-4EFC-AE8C-2D2E7A159F2A - 54DF4EF1-9447-4EFC-AE8C-2D2E7A159F2A</string>
 			<key>to</key>
 			<string>43412101-D510-4114-9BDF-1F9B31440D32 - 43412101-D510-4114-9BDF-1F9B31440D32</string>
-		</dict>
-		<key>F443FBBB-593D-4671-A13F-34C189DC34D8</key>
-		<dict>
-			<key>from</key>
-			<string>386B80EB-4419-43EC-AA93-C3FB2C528558 - 386B80EB-4419-43EC-AA93-C3FB2C528558</string>
-			<key>to</key>
-			<string>9A2C0AF6-0249-49E6-8827-A64C48E04CB3 - 9A2C0AF6-0249-49E6-8827-A64C48E04CB3</string>
 		</dict>
 	</dict>
 	<key>variables</key>
