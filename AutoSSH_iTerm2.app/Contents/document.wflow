@@ -259,7 +259,7 @@ end run</string>
 				<key>ActionParameters</key>
 				<dict>
 					<key>pauseDuration</key>
-					<integer>2</integer>
+					<integer>5</integer>
 					<key>pauseUnit</key>
 					<integer>0</integer>
 				</dict>
@@ -509,28 +509,28 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>8B6FE7EC-0071-413C-BECE-CCE44AB11A9B</key>
+		<key>2EDC884B-638B-4745-9361-D7D0C187CC33</key>
 		<dict>
 			<key>from</key>
 			<string>9A2C0AF6-0249-49E6-8827-A64C48E04CB3 - 9A2C0AF6-0249-49E6-8827-A64C48E04CB3</string>
 			<key>to</key>
 			<string>54DF4EF1-9447-4EFC-AE8C-2D2E7A159F2A - 54DF4EF1-9447-4EFC-AE8C-2D2E7A159F2A</string>
 		</dict>
-		<key>95477E03-DCD8-4914-A1A7-048EDEAB2F95</key>
+		<key>53322036-116B-4FE6-8BC3-46FA398CF2DD</key>
 		<dict>
 			<key>from</key>
 			<string>386B80EB-4419-43EC-AA93-C3FB2C528558 - 386B80EB-4419-43EC-AA93-C3FB2C528558</string>
 			<key>to</key>
 			<string>9A2C0AF6-0249-49E6-8827-A64C48E04CB3 - 9A2C0AF6-0249-49E6-8827-A64C48E04CB3</string>
 		</dict>
-		<key>FBB7E4F3-C0F5-49EA-B66E-C4B4B8D97F36</key>
+		<key>7CC3D757-E35E-4E0C-917A-5417921812C1</key>
 		<dict>
 			<key>from</key>
 			<string>043FC4E3-3D94-424B-946D-985D18053272 - 043FC4E3-3D94-424B-946D-985D18053272</string>
 			<key>to</key>
 			<string>386B80EB-4419-43EC-AA93-C3FB2C528558 - 386B80EB-4419-43EC-AA93-C3FB2C528558</string>
 		</dict>
-		<key>FD378B5D-6DCD-480D-A85B-C12D65D4679A</key>
+		<key>F9253E67-18F4-4F69-BD6D-856F09AD9BA1</key>
 		<dict>
 			<key>from</key>
 			<string>54DF4EF1-9447-4EFC-AE8C-2D2E7A159F2A - 54DF4EF1-9447-4EFC-AE8C-2D2E7A159F2A</string>
