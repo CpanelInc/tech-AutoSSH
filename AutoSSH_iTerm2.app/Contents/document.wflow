@@ -159,7 +159,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run argv	set autosshFilePath to (quoted form of POSIX path of (item 1 of argv as string))	set applicationPath to (quoted form of POSIX path of (path to me as string))	setTicketNumber(autosshFilePath)	setTabNumber(autosshFilePath)	setTicketSubject(autosshFilePath)	setSshUsername(autosshFilePath)	setSshHost(autosshFilePath)	setSshPort(autosshFilePath)	setBadge(ticketNumber, tabNumber)	autossh(autosshFilePath, applicationPath)end runon setTicketNumber(autosshFilePath)	set ticketNumber to do shell script "cat " &amp; autosshFilePath &amp; "  | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"ticket_id\"]'"end setTicketNumberon setTabNumber(autosshFilePath)	set tabNumber to do shell script "cat " &amp; autosshFilePath &amp; "  | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"server_num\"]'"end setTabNumberon setSshUsername(autosshFilePath)	set sshUsername to do shell script "cat " &amp; autosshFilePath &amp; "  | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"ssh_username\"]'"end setSshUsernameon setSshHost(autosshFilePath)	set sshHost to do shell script "cat " &amp; autosshFilePath &amp; "  | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"ssh_host\"]'"end setSshHoston setSshPort(autosshFilePath)	set sshPort to do shell script "cat " &amp; autosshFilePath &amp; "  | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"ssh_port\"]'"end setSshPorton setTicketSubject(autosshFilePath)	set ticketSubject to do shell script "cat " &amp; autosshFilePath &amp; "  | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"ticket_subject\"]'"end setTicketSubjecton setBadge(ticketNumber, tabNumber)	tell application "iTerm"		tell current session of current window			set variable named "user.BADGE" to ticketNumber &amp; " #" &amp; tabNumber			set variable named "user.TKT" to ticketNumber			set variable named "user.TAB" to tabNumber			set variable named "user.SUNAME" to sshUsername			set variable named "user.SHOST" to sshHost			set variable named "user.SPORT" to sshPort			set variable named "user.TKTSBJCT" to ticketSubject		end tell	end tellend setBadgeon autossh(autosshFilePath, applicationPath)	tell application "iTerm"		tell current session of current window			activate		end tell	end tell		tell application "System Events"		keystroke "u" using {control down}		keystroke "l" using {control down}	end tell		tell application "iTerm"		tell current session of current window			write text applicationPath &amp; "autossh4.pl " &amp; autosshFilePath		end tell	end tellend autossh</string>
+					<string>on run argv	set autosshFilePath to (quoted form of POSIX path of (item 1 of argv as string))	set applicationPath to (quoted form of POSIX path of (path to me as string))	setTicketNumber(autosshFilePath)	setTabNumber(autosshFilePath)	setTicketSubject(autosshFilePath)	setSshUsername(autosshFilePath)	setSshHost(autosshFilePath)	setSshPort(autosshFilePath)	setBadge(ticketNumber, tabNumber)	autossh(autosshFilePath, applicationPath)end runon setTicketNumber(autosshFilePath)	set ticketNumber to do shell script "cat " &amp; autosshFilePath &amp; "  | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"ticket_id\"]'"end setTicketNumberon setTabNumber(autosshFilePath)	set tabNumber to do shell script "cat " &amp; autosshFilePath &amp; "  | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"server_num\"]'"end setTabNumberon setSshUsername(autosshFilePath)	set sshUsername to do shell script "cat " &amp; autosshFilePath &amp; "  | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"ssh_username\"]'"end setSshUsernameon setSshHost(autosshFilePath)	set sshHost to do shell script "cat " &amp; autosshFilePath &amp; "  | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"ssh_host\"]'"end setSshHoston setSshPort(autosshFilePath)	set sshPort to do shell script "cat " &amp; autosshFilePath &amp; "  | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"ssh_port\"]'"end setSshPorton setTicketSubject(autosshFilePath)	set ticketSubject to do shell script "cat " &amp; autosshFilePath &amp; "  | python -c 'import json,sys;obj=json.load(sys.stdin);print obj[\"ticket_subject\"]'"end setTicketSubjecton setBadge(ticketNumber, tabNumber)	tell application "iTerm"		tell current session of current window			set variable named "user.BADGE" to ticketNumber &amp; " #" &amp; tabNumber			set variable named "user.TKT" to ticketNumber			set variable named "user.TAB" to tabNumber		end tell	end tellend setBadgeon autossh(autosshFilePath, applicationPath)	tell application "iTerm"		tell current session of current window			activate		end tell	end tell		tell application "System Events"		keystroke "u" using {control down}		keystroke "l" using {control down}	end tell		tell application "iTerm"		tell current session of current window			write text applicationPath &amp; "autossh4.pl " &amp; autosshFilePath		end tell	end tellend autossh</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -509,33 +509,33 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>A0A2D3DB-7603-4609-B5CF-BE30B4CE6CAF</key>
+		<key>16AC0BBE-A376-460D-B51A-F39C85C3D506</key>
+		<dict>
+			<key>from</key>
+			<string>386B80EB-4419-43EC-AA93-C3FB2C528558 - 386B80EB-4419-43EC-AA93-C3FB2C528558</string>
+			<key>to</key>
+			<string>9A2C0AF6-0249-49E6-8827-A64C48E04CB3 - 9A2C0AF6-0249-49E6-8827-A64C48E04CB3</string>
+		</dict>
+		<key>52D6AE8B-A411-408B-85FE-D4CAD7A0C7A3</key>
+		<dict>
+			<key>from</key>
+			<string>54DF4EF1-9447-4EFC-AE8C-2D2E7A159F2A - 54DF4EF1-9447-4EFC-AE8C-2D2E7A159F2A</string>
+			<key>to</key>
+			<string>43412101-D510-4114-9BDF-1F9B31440D32 - 43412101-D510-4114-9BDF-1F9B31440D32</string>
+		</dict>
+		<key>7CF6722B-B54C-4077-8C20-FF038AA9F5D5</key>
 		<dict>
 			<key>from</key>
 			<string>043FC4E3-3D94-424B-946D-985D18053272 - 043FC4E3-3D94-424B-946D-985D18053272</string>
 			<key>to</key>
 			<string>386B80EB-4419-43EC-AA93-C3FB2C528558 - 386B80EB-4419-43EC-AA93-C3FB2C528558</string>
 		</dict>
-		<key>AABB3B20-6124-47AA-875C-C946C2312AB4</key>
-		<dict>
-			<key>from</key>
-			<string>386B80EB-4419-43EC-AA93-C3FB2C528558 - 386B80EB-4419-43EC-AA93-C3FB2C528558</string>
-			<key>to</key>
-			<string>9A2C0AF6-0249-49E6-8827-A64C48E04CB3 - 9A2C0AF6-0249-49E6-8827-A64C48E04CB3</string>
-		</dict>
-		<key>BD207AB9-29B3-4CC6-96DA-639A2FA7D48D</key>
+		<key>9C85FA75-BB1A-4D00-B53A-4A120B14AD59</key>
 		<dict>
 			<key>from</key>
 			<string>9A2C0AF6-0249-49E6-8827-A64C48E04CB3 - 9A2C0AF6-0249-49E6-8827-A64C48E04CB3</string>
 			<key>to</key>
 			<string>54DF4EF1-9447-4EFC-AE8C-2D2E7A159F2A - 54DF4EF1-9447-4EFC-AE8C-2D2E7A159F2A</string>
-		</dict>
-		<key>E66ED2F2-F0EE-404E-967C-987CA5F8058E</key>
-		<dict>
-			<key>from</key>
-			<string>54DF4EF1-9447-4EFC-AE8C-2D2E7A159F2A - 54DF4EF1-9447-4EFC-AE8C-2D2E7A159F2A</string>
-			<key>to</key>
-			<string>43412101-D510-4114-9BDF-1F9B31440D32 - 43412101-D510-4114-9BDF-1F9B31440D32</string>
 		</dict>
 	</dict>
 	<key>variables</key>
